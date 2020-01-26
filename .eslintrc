@@ -15,8 +15,14 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
     "React": true,
+    "window": true,
     "document": true,
-    "window": true
+    "localStorage": true,
+    "process": true,
+    "console": true,
+    "navigator": true,
+    "fetch": true,
+    "URL": true
   },
   "settings": {
     "react": {

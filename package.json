@@ -8,7 +8,27 @@
   },
   "author": "Yuchen Qiao",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged",
+      "pre-push": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "pretty-quick --staged",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,css,md}": [
+      "pretty-quick --staged",
+      "git add"
+    ]
+  },
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.9.0",
@@ -17,6 +37,8 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.2",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1"
   }
