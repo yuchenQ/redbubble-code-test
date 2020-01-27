@@ -1,117 +1,54 @@
-## Webpack react minimal boilerplate
-<p align="center">
-    <img alt="dependencies" title="dependencies" src="https://img.shields.io/david/hashemkhalifa/webpack-react-boilerplate.svg" >
-   <img alt="dependencies" title="dependencies" src="https://img.shields.io/github/last-commit/hashemkhalifa/webpack-react-boilerplate.svg" >
-</p>
+## JS-REACT-STARTER
+### Features
 
-### Table of contents
-[Project structure](#project-structure)
-
-[Installation](#installation)
-
-[Configuration](#configuration)
-
-[Technologies used](#technologies-used)
-
-### Project structure
-
-````
-build/
-src/
-|- index.jsx _______________________________ # Application entry 
-|- App.jsx _________________________________ # Application init
-|  |- Components/
-|    |- hello-world/ 
-|       |- index.jsx _______________________ # Sample component
-
-webpack
-|- paths.js ________________________________ # webpack paths needed
-|- webpack.common.js _______________________ # common webpack config
-|- webpack.dev.js __________________________ # development config
-|- webpack.prod.js _________________________ # production config      
-````
-
-
-### Installation
-
-1- Clone the boilerplate repo
-
-`git clone git@github.com:HashemKhalifa/webpack-react-boilerplate.git`
-
-2- `yarn` or `npm install` to install npm packages
-
-3- start dev server using `yarn start` or `npm start`.
-
-3- build and bundling your resources for production `yarn build`.
-
-4- Unit testing will watch all your changes in the test files as well as create coverage folder for you. 
-`yarn test`
+| Tool                | Description                    | Branch                               |
+|---------------------|--------------------------------|--------------------------------------|
+| Git                 | Version Control                | Git, Husky                           |
+| Webpack             | Bundler                        | Mode, Server, Debugger, Analyzer     |
+| React               | Component Web                  | Styled-components                    |
+| Test                | Test code                      | Jest, React-testing-library          |
+| Code Formatter      | Format code                    | Prettier                             |
+| Code Error Detector | Detect potential error         | ESLint                               |
 
 
 
-<p align="center">
-    <h3 align="center">Simple React Webpack Babel Starter Kit<br></h3>
-</p>
+### Prepare
+- **Step 1**: `git clone git@github.com:yuchenQ/js-react-starter.git project_folder_name` 
+- **Step 2**: `cd project_folder_name && rm -rf .git`
 
-
-<p align="center">
-  Tired of complicated starters with 200MB of dependencies which are hard to understand and modify? This is for you!
-  This is a simple react application without redux, stylesheets or other set frameworks. It's only meant to get you started and the rest if up to you. Our goal for is to keep things simple and give you the freedom to select your own frameworks to add on top of this one.
-</p>
-
-
-<div class="center">
-  [![Dependency Status](https://img.shields.io/david/ReactJSResources/react-webpack-babel.svg)](https://david-dm.org/dylang/npm-check)
-</div>  
-
-
-### Demo
-https://murmuring-fjord-36537.herokuapp.com/
-
-### Prerequisites
-* You'll need to have [git](https://git-scm.com/) and [node](https://nodejs.org/en/) installed in your system.
-
-### To run
-* Fork and clone the project:
-
-```
-git clone https://github.com/ReactJSResources/react-webpack-babel.git
-```
-
-* Then install the dependencies:
-
-```
+### Install 
+```sh
+# or
 npm install
 ```
 
-* Run development server:
-
-```
-npm run dev
-```
-
-Open the web browser to `http://localhost:8080/`
-
-### To test
-To run unit tests:
-
-```
-npm run test
+### Start
+```sh
+# or
+npm run start
 ```
 
-### To build the production package
-```
+### Build
+```sh
+# or
 npm run build
 ```
 
-### Eslint
-There is a `.eslintrc.js` config for eslint ready with React plugin.
+### Important
+- Don't forget install [@types/package](https://microsoft.github.io/TypeSearch/)
+- Don't forget to add [webpack loader](https://webpack.js.org/loaders/).
+- Don't forget to add `type declaration` in `typings` folder
 
-To run linting, run:
+## References
+[Typescript+React](https://www.jianshu.com/p/5b9d330c3740)
 
-```
-npm run lint
-```
+[ESLint for Typescript](https://zhuanlan.zhihu.com/p/62401626)
 
-### Contribute
-Please contribute to the project if you know how to make it better, including this README :)
+[Typescript Docs](https://typescript.bootcss.com/generics.html)
+
+[Typescript Configs](https://github.com/hstarorg/HstarDoc/blob/master/%E5%89%8D%E7%AB%AF%E7%9B%B8%E5%85%B3/TypeScript%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6tsconfig%E7%AE%80%E6%9E%90.md)
+
+
+## License
+
+Create React App is open source software licensed as `MIT`
