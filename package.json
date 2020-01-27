@@ -9,15 +9,15 @@
     "lint": "concurrently npm:lint:*",
     "lint:js": "eslint './src/**/*.{jsx,js}' --quiet --fix",
     "lint:styles": "stylelint './src/**/*.jsx'",
-    "test:unit": "jest src --coverage --coverageReporters=text"
+    "test": "jest src --coverage --coverageReporters=text"
   },
   "author": "Yuchen Qiao",
   "license": "MIT",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "pre-push": "lint-staged"
+      "pre-commit": "npm test && lint-staged",
+      "pre-push": "npm test && lint-staged"
     }
   },
   "lint-staged": {
