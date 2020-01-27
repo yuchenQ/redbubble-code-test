@@ -9,5 +9,5 @@ const Header = styled.h1`
 `;
 
 export default function App() {
-  return <Header>Hello World!</Header>;
+  return <Header data-testid="hello-world">Hello World!</Header>;
 }

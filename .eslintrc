@@ -1,6 +1,13 @@
 {
-  "plugins": ["react", "prettier"],
-  "extends": ["airbnb", "airbnb/hooks", "plugin:prettier/recommended", "prettier/react"],
+  "plugins": ["react", "prettier", "jest", "jest-dom"],
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:jest/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:prettier/recommended",
+    "prettier/react"
+  ],
   "parserOptions": {
     "ecmaVersion": 2019,
     "sourceType": "module"
