@@ -10,8 +10,6 @@ const dashboard = new Dashboard();
 const DEFAULT_PORT = 8000;
 
 module.exports = merge(baseConfig, {
-  mode: 'development',
-
   devtool: 'cheap-module-eval-source-map',
 
   performance: {

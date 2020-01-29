@@ -7,8 +7,6 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const baseConfig = require('./webpack.config.base');
 
 module.exports = merge(baseConfig, {
-  mode: 'production',
-
   performance: {
     hints: 'error',
   },

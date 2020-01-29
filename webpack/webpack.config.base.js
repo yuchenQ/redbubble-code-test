@@ -3,13 +3,18 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const ROOT_DIRECTORY = path.join(__dirname, '..');
 const SRC_DIRECTORY = path.join(ROOT_DIRECTORY, 'src');
 const BUILD_DIRECTORY = path.join(ROOT_DIRECTORY, 'build');
 
+const mode = process.env.NODE_ENV || 'production';
+
 const baseConfig = {
+  mode,
+
   entry: [path.resolve(SRC_DIRECTORY, 'index.jsx')],
 
   output: {
@@ -33,7 +38,18 @@ const baseConfig = {
         test: /\.css$/,
         include: path.join(SRC_DIRECTORY, 'styles'),
         exclude: /node_modules/,
-        use: ['style-loader', 'css-loader'],
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // only enable hot in development
+              hmr: mode === 'development',
+              // if hmr does not work, this is a forceful method.
+              reloadAll: true,
+            },
+          },
+          'css-loader',
+        ],
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
@@ -61,6 +77,10 @@ const baseConfig = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(ROOT_DIRECTORY, 'public', 'index.html'),
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[id].css',
     }),
     new HardSourceWebpackPlugin(),
   ],
