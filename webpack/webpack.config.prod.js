@@ -16,16 +16,13 @@ module.exports = merge(baseConfig, {
     minimizer: [new TerserPlugin({ cache: true }), new OptimizeCSSAssetsPlugin({})],
     splitChunks: {
       chunks: 'all',
-      maxInitialRequests: Infinity,
       minSize: 0,
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name(module) {
-            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-            // some servers don't like tag'@'
-            return `npm.${packageName.replace('@', '')}`;
-          },
+          name: 'vendor',
+          priority: 2,
+          minChunks: 2,
         },
       },
     },

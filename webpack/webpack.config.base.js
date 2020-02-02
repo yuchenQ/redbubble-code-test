@@ -23,8 +23,9 @@ const baseConfig = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx'],
     modules: [SRC_DIRECTORY, path.resolve(__dirname, '../node_modules')],
+    extensions: ['.js', '.jsx'],
+    mainFiles: ['index'],
   },
 
   module: {
@@ -32,7 +33,7 @@ const baseConfig = {
       {
         test: /\.(js)x?$/,
         exclude: /node_modules/,
-        use: ['babel-loader?cacheDirectory=true'],
+        use: ['babel-loader?cacheDirectory'],
       },
       {
         test: /\.css$/,
@@ -77,6 +78,12 @@ const baseConfig = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: path.join(ROOT_DIRECTORY, 'public', 'index.html'),
+      minify: {
+        // compress HTML
+        collapseWhitespace: true,
+        removeComments: true,
+        useShortDoctype: true,
+      },
     }),
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',

@@ -22,33 +22,33 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "pretty-quick --staged",
+      "pretty-quick",
       "eslint --fix",
       "git add"
     ],
     "*.{json,css,md}": [
-      "pretty-quick --staged",
+      "pretty-quick",
       "git add"
     ]
   },
   "dependencies": {
-    "@babel/runtime-corejs3": "^7.8.3",
-    "concurrently": "^5.0.2",
+    "@babel/runtime-corejs3": "^7.8.4",
+    "concurrently": "^5.1.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.8.3",
-    "@babel/core": "^7.8.3",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/plugin-transform-runtime": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.3.4",
-    "@testing-library/jest-dom": "^5.0.2",
+    "@testing-library/jest-dom": "^5.1.0",
     "@testing-library/react": "^9.4.0",
     "babel-jest": "^25.1.0",
     "babel-loader": "^8.0.6",
@@ -57,13 +57,13 @@
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jest": "^23.6.0",
     "eslint-plugin-jest-dom": "^2.0.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react": "^7.18.2",
     "eslint-plugin-react-hooks": "^1.7.0",
     "file-loader": "^5.0.2",
     "hard-source-webpack-plugin": "^0.13.1",
@@ -73,7 +73,7 @@
     "jest": "^25.1.0",
     "jest-styled-components": "^7.0.0",
     "jest-watch-typeahead": "^0.4.2",
-    "lint-staged": "^10.0.2",
+    "lint-staged": "^10.0.7",
     "mini-css-extract-plugin": "^0.9.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prettier": "^1.19.1",
@@ -83,13 +83,13 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.9.0",
-    "terser-webpack-plugin": "^2.3.2",
+    "terser-webpack-plugin": "^2.3.4",
     "url-loader": "^3.0.0",
     "webpack": "^4.41.5",
     "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.3.10",
     "webpack-dashboard": "^3.2.0",
-    "webpack-dev-server": "^3.10.1",
+    "webpack-dev-server": "^3.10.2",
     "webpack-merge": "^4.2.2"
   }
 }

@@ -1,34 +1,37 @@
-## JS-REACT-STARTER
-### Features
+# JS-REACT-STARTER
 
-| Tool                | Description                    | Branch                               |
-|---------------------|--------------------------------|--------------------------------------|
-| Git                 | Version Control                | Git, Husky                           |
-| Webpack             | Bundler                        | Mode, Server, Debugger, Analyzer     |
-| React               | Component Web                  | Styled-components                    |
-| Test                | Test code                      | Jest, React-testing-library          |
-| Code Formatter      | Format code                    | Prettier                             |
-| Code Error Detector | Detect potential error         | ESLint                               |
+## Features
 
+| Tool                | Description            | Branch                           |
+| ------------------- | ---------------------- | -------------------------------- |
+| Git                 | Version Control        | Git, Husky                       |
+| Webpack             | Bundler                | Mode, Server, Debugger, Analyzer |
+| React               | Component Web          | Styled-components                |
+| Test                | Test code              | Jest, React-testing-library      |
+| Code Formatter      | Format code            | Prettier                         |
+| Code Error Detector | Detect potential error | ESLint                           |
 
+## Prepare
 
-### Prepare
-- **Step 1**: `git clone git@github.com:yuchenQ/js-react-starter.git project_folder_name` 
+- **Step 1**: `git clone git@github.com:yuchenQ/js-react-starter.git project_folder_name`
 - **Step 2**: `cd project_folder_name && rm -rf .git`
 
-### Install 
+## Install
+
 ```sh
 # or
 npm install
 ```
 
-### Start
+## Start
+
 ```sh
 # or
 npm run start
 ```
 
-### Build
+## Build
+
 ```sh
 # or
 npm run build
