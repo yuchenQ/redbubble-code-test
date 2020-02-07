@@ -5,9 +5,7 @@ module.exports = {
   roots: ['<rootDir>/src'],
   transform: {
     '\\.(t|j)sx?$': 'babel-jest',
-  },
-  moduleNameMapper: {
-    '\\.(css|less|scss)$': 'identity-obj-proxy',
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
   },
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(t|j)sx?$',
   testPathIgnorePatterns: ['/node_modules/', '/public/'],

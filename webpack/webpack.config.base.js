@@ -2,7 +2,6 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -89,7 +88,6 @@ const baseConfig = {
       filename: 'css/[name].css',
       chunkFilename: 'css/[id].css',
     }),
-    new HardSourceWebpackPlugin(),
   ],
 };
 
