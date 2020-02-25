@@ -13,7 +13,10 @@ module.exports = merge(baseConfig, {
 
   optimization: {
     minimize: true,
-    minimizer: [new TerserPlugin({ cache: true }), new OptimizeCSSAssetsPlugin({})],
+    minimizer: [
+      new TerserPlugin({ cache: true }),
+      new OptimizeCSSAssetsPlugin({}),
+    ],
     splitChunks: {
       chunks: 'all',
       minSize: 0,

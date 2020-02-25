@@ -35,5 +35,12 @@
     "react": {
       "version": "detect" // depends on eslint-plugin-react
     }
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": [
+      2,
+      { "devDependencies": ["**/*.stories.jsx", "**/*.test.*", "**/webpack.config.*.js"] }
+    ]
   }
 }
