@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Page Default 1`] = `
+.c0 {
+  box-sizing: border-box;
+  width: 1080px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.c1 {
+  display: grid;
+  grid-row-gap: 2rem;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <section
+      className=""
+    >
+      children
+    </section>
+  </div>
+</div>
+`;
