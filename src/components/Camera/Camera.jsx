@@ -52,7 +52,7 @@ export function Camera({ url: { link }, exif }) {
   const { model, software, isoSpeedRatings, make } = mapEmptyToUnknown(exif);
 
   return (
-    <StyledCamera>
+    <StyledCamera data-testid="camera">
       <PreviewImage
         imageUrl={link}
         caption="camera preview"
