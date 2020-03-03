@@ -1,6 +1,6 @@
 /** @format */
 
-const UNKNOWN = {
+export const UNKNOWN = {
   MODEL: 'Unknown Model',
   SOFTWARE: 'Unknown Software',
   ISO_SPEED_RATINGS: 'Unknown Iso Speed Ratings',
