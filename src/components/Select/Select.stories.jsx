@@ -13,7 +13,7 @@ export default {
   includeStories: ['Default'],
 };
 
-const options = ['option_1', 'option_2', 'option_3'];
+export const options = ['option_1', 'option_2', 'option_3'];
 
 const DefaultSelect = () => {
   const [value, setValue] = useState(options[0]);
