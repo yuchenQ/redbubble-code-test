@@ -25,8 +25,8 @@ function Page({ className, header, children }) {
   return (
     <StyledPage>
       <Layout className={className}>
-        <Header>{header}</Header>
-        <Body>{children}</Body>
+        <Header data-testid="header">{header}</Header>
+        <Body data-testid="body">{children}</Body>
       </Layout>
     </StyledPage>
   );

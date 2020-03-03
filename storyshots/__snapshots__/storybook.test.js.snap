@@ -22,14 +22,43 @@ exports[`Storyshots Page Default 1`] = `
   >
     <section
       className=""
+      data-testid="header"
     >
       header
     </section>
     <section
       className=""
+      data-testid="body"
     >
       children
     </section>
   </div>
 </div>
+`;
+
+exports[`Storyshots Select Default 1`] = `
+<select
+  data-testid="select"
+  onChange={[Function]}
+  value="option_1"
+>
+  <option
+    data-testid="option"
+    value="option_1"
+  >
+    option_1
+  </option>
+  <option
+    data-testid="option"
+    value="option_2"
+  >
+    option_2
+  </option>
+  <option
+    data-testid="option"
+    value="option_3"
+  >
+    option_3
+  </option>
+</select>
 `;

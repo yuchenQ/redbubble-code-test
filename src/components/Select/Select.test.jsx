@@ -4,10 +4,10 @@ import React from 'react';
 import { render, cleanup, fireEvent } from '@testing-library/react';
 import sinon from 'sinon';
 import { Select } from './Select';
-import { options } from './Select.stories';
 
 describe('Select', () => {
   const onSelectSpy = sinon.spy();
+  const options = ['option_1', 'option_2', 'option_3'];
 
   const data = {
     options,
