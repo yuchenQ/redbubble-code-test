@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
-    "start": "NODE_ENV=development webpack-dev-server --config webpack/webpack.config.dev.js",
+    "start:dev": "NODE_ENV=development webpack-dev-server --config webpack/webpack.config.dev.js",
     "lint": "concurrently npm:lint:*",
     "lint:js": "eslint './src/**/*.{jsx,js}' --quiet --fix",
     "lint:styles": "stylelint './src/**/*.jsx'",
@@ -13,7 +13,7 @@
     "test:unit": "jest src --config ./jest.config.json --coverage --coverageReporters=text --passWithNoTests",
     "test:snap": "jest storyshots --config ./jest.config.json",
     "test:snap:update": "npm run test:snap -- -u",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook -p 6006"
   },
   "license": "MIT",
   "husky": {
