@@ -7,7 +7,7 @@ export const ALL = 'ALL';
  * @param {string} make
  * @return {function}
  */
-function getFilter(model, make) {
+function getFilter({ model, make }) {
   return {
     [[true, false]]: data => data.make === make,
     [[false, true]]: data => data.model === model,
@@ -21,12 +21,16 @@ function getFilter(model, make) {
  * @param {Work[]} works
  * @return {Work[]}
  */
-export function filterWorks({ model, make }, works) {
+export function filterWorks(state, works) {
+  if (!state || typeof state !== 'object') {
+    throw new Error('Error occurs in filterWorks(): Invalid parameter: state');
+  }
+
   if (!works || !Array.isArray(works)) {
     throw new Error('Error occurs in filterWorks(): Invalid parameter: works');
   }
 
-  const filter = getFilter(model, make);
+  const filter = getFilter(state);
 
   return works.filter(({ exif }) => {
     const temp = exif || { model: '', make: '' };
