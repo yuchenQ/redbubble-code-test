@@ -42,7 +42,7 @@ describe('Select', () => {
     expect(value).toBe(data.value);
   });
 
-  test('onChange & value', () => {
+  test('should invoke onSelect & value', () => {
     const select = getByTestId('select');
 
     expect(select.value).toBe(data.value);
