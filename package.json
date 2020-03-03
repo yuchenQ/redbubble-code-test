@@ -1,7 +1,7 @@
 {
   "name": "redbubble-code-test",
   "version": "1.0.0",
-  "description": "Code test for Redbubble front-end role",
+  "description": "The Code test for Redbubble front-end role",
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
