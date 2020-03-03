@@ -12,10 +12,6 @@ const DEFAULT_PORT = 8000;
 module.exports = merge(baseConfig, {
   devtool: 'cheap-module-eval-source-map',
 
-  performance: {
-    hints: 'warning',
-  },
-
   devServer: {
     compress: true,
     hot: true,

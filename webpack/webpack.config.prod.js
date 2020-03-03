@@ -8,7 +8,7 @@ const baseConfig = require('./webpack.config.base');
 
 module.exports = merge(baseConfig, {
   performance: {
-    hints: 'error',
+    hints: 'warning',
   },
 
   optimization: {
