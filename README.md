@@ -20,7 +20,7 @@ Test Coverage: 94%
 ### 1. Prerequisites
 
 - Git
-- Node(& npm): any 12.x version starting with 12.14.1s or greater
+- Node(& npm): any 12.x version starting with 12.14.1 or greater
 
 ### 2. Installation
 
