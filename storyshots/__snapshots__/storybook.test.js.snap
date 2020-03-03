@@ -23,6 +23,11 @@ exports[`Storyshots Page Default 1`] = `
     <section
       className=""
     >
+      header
+    </section>
+    <section
+      className=""
+    >
       children
     </section>
   </div>

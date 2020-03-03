@@ -17,12 +17,15 @@ const Layout = styled.div`
   grid-row-gap: 2rem;
 `;
 
+const Header = styled.section``;
+
 const Body = styled.section``;
 
-function Page({ className, children }) {
+function Page({ className, header, children }) {
   return (
     <StyledPage>
       <Layout className={className}>
+        <Header>{header}</Header>
         <Body>{children}</Body>
       </Layout>
     </StyledPage>
@@ -35,6 +38,7 @@ Page.defaultProps = {
 
 Page.propTypes = {
   className: PropTypes.string,
+  header: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
 };
 

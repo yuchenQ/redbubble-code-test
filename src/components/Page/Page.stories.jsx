@@ -15,5 +15,9 @@ export default {
 };
 
 export function Default() {
-  return <Page>{text('children', 'children')}</Page>;
+  return (
+    <Page header={text('header', 'header')}>
+      {text('children', 'children')}
+    </Page>
+  );
 }
