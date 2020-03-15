@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "The Code test for RedBubble job application",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuchenQ/redbubble-code-test.git"
+  },
   "scripts": {
     "build": "NODE_ENV=production webpack --config webpack/webpack.config.prod.js",
     "start:dev": "NODE_ENV=development webpack-dev-server --config webpack/webpack.config.dev.js",
